@@ -1,0 +1,10 @@
+<div class="edit-tags">
+  <app-modal (showModal)="showModal = $event" *ngIf="showModal">
+    <app-tag-form
+      [loadData]="true"
+      (tags)="editTags($event)"
+      (showModal)="showModal = $event"
+    ></app-tag-form>
+  </app-modal>
+  <button class="btn btn-primary" (click)="showModal = true">Edit Tags</button>
+</div>

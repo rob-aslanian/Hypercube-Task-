@@ -1,0 +1,9 @@
+.close {
+  margin-left: 1rem;
+  color: #fff;
+  font-size: 0.75rem;
+}
+.btn {
+  display: flex;
+  align-items: center;
+}

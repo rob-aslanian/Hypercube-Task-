@@ -1,0 +1,7 @@
+<div class="tags" *ngIf="tagService.getTags().length > 0">
+  <div class="tag-list">
+    <app-tag *ngFor="let tag of tagService.getTags()" [tag]="tag"></app-tag>
+  </div>
+  <hr />
+  <button class="btn btn-danger" (click)="deleteTags()">Delete all Tags</button>
+</div>

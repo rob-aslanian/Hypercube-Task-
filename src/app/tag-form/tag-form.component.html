@@ -1,0 +1,20 @@
+<form [formGroup]="tagsForm" (ngSubmit)="submitForm(tagsForm)">
+  <div class="form-group">
+    <textarea
+      class="form-control"
+      rows="3"
+      [formControl]="tagsForm.controls['tag']"
+    ></textarea>
+  </div>
+  <!-- 
+    Show if textfield is empty
+  -->
+  <app-alert *ngIf="!valid">
+    Value is required!
+  </app-alert>
+
+  <button type="submit" class="btn btn-primary" [disabled]="tagsForm.invalid">
+    {{ loadData ? "Save" : "Add Tags" }}
+  </button>
+
+</form>

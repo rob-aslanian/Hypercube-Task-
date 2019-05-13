@@ -1,0 +1,8 @@
+<button
+  class="btn"
+  [ngClass]="{ 'btn-info': tag.value < 0, 'btn-danger': tag.value >= 0 }"
+  *ngIf="tag"
+>
+  {{ tag.value }}
+  <span class="close" (click)="deleteTag(tag.id)">X</span>
+</button>
